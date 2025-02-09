@@ -1,21 +1,21 @@
 "use client";
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/zoom';
 import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-// import required modules
 import { Zoom, Navigation, Pagination } from 'swiper/modules';
+
+import { FcCamera } from "react-icons/fc";
 
 export default function Gallery() {
 
   return (
-    <section id="galería" className="h-auto bg-black/50 py-10">
-      <h2 className="text-5xl text-white pb-10 font-bold text-center">Galería</h2>
+    <section id="galería" className="h-auto bg-black py-10">
+      <h2 className="text-4xl text-white pb-10 font-bold flex items-center gap-2 justify-center"><FcCamera size={40} /> Galería</h2>
       <Swiper
         zoom={true}
         navigation={true}

@@ -24,7 +24,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="sticky top-0 w-full h-20 px-4 bg-green-600 text-white flex justify-between items-center z-50 border-b border-gray-200">
+    <nav className="sticky top-0 w-full h-20 px-4 bg-green-600 text-white flex justify-between items-center z-50">
       <h1 className="text-lg md:text-3xl font-bold flex gap-2 items-center">
         <PiPottedPlant color="brown" size={30} />
         <Link title="Colgantes Mónica" href="/">Colgantes Mónica</Link>

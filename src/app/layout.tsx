@@ -62,7 +62,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${geistSans.variable} ${geistMono.variable} bg-cover bg-center bg-no-repeat bg-fixed bg-header`}>
+      <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Navbar />  
         {children}
       </body>
