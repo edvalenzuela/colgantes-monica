@@ -51,7 +51,7 @@ export default function ContactForm() {
           <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md">
             <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
               <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">Correo</h2>
-              <a className="text-indigo-500 leading-relaxed">monica.pm.1964@gmail.com</a>
+              <a className="text-indigo-500 leading-relaxed">contacto@colgantesmonica.cl</a>
               <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">Celular</h2>
               <p className="leading-relaxed">+56991440999</p>
             </div>
