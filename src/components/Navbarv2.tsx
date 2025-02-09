@@ -3,7 +3,7 @@ import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react
 import Link from 'next/link'
 import { useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
-import { PiPottedPlant } from 'react-icons/pi'
+import CustomSVGIcon from './SvgIcon'
 
 const navigation = [
   { name: 'Inicio', href: '/', current: true },
@@ -35,10 +35,9 @@ export default function Navbarv2() {
           <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex shrink-0 items-center">
               <Link href='/' className='group' title="Colgantes Mónica">
-                <PiPottedPlant 
-                  className="fill-white group-hover:fill-orange-600" 
-                  size={30} 
-                />
+              <div className="h-15 w-15 sm:h-12 sm:w-12 hover:bg-white p-1 rounded-full transition">
+                <CustomSVGIcon />
+              </div>
               </Link>
             </div>
             <div className="hidden sm:ml-6 sm:block">
@@ -50,7 +49,7 @@ export default function Navbarv2() {
                     aria-current={current ? 'page' : undefined}
                     className={isCurrentMenu(
                       current ? 'bg-orange-600 text-white' : 'text-white hover:bg-orange-600 hover:text-white',
-                      'rounded-md px-3 py-2 text-base font-medium',
+                      'rounded-md p-3 text-base font-medium',
                     )}
                     onClick={() => setIsOpen(false)}
                   >

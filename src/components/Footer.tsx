@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FaWhatsapp, FaInstagram, FaFacebook } from "react-icons/fa";
-import { PiPottedPlant } from "react-icons/pi";
+import CustomSVGIcon from "./SvgIcon";
 
 export default function Footer() {
 
@@ -10,9 +10,9 @@ export default function Footer() {
 
   return (
     <footer className="bg-orange-400">
-      <div className="container py-10 mx-auto flex items-center sm:flex-row flex-col gap-4 sm:gap-0">
+      <div className="container py-10 sm:py-5 mx-auto flex items-center sm:flex-row flex-col gap-4 sm:gap-0">
         <Link href='/' className="group rounded-md px-3 py-2 text-base font-medium bg-orange-600 hover:bg-white text-white flex items-center gap-1 md:justify-start justify-center">
-          <PiPottedPlant className="fill-white group-hover:fill-orange-600" size={30} />
+          <CustomSVGIcon className="text-black"/>
           <p className="group-hover:text-orange-600 text-white font-bold">Colgantes Mónica</p>
         </Link>
         <Link className="group font-bold text-base" href="https://github.com/edvalenzuela/" title="Eduardo Valenzuela" rel="noopener noreferrer" target="_blank">
