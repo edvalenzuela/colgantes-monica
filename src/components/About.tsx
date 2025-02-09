@@ -9,7 +9,7 @@ export default function About() {
           <h1 className="text-4xl mb-5 font-bold text-white flex items-center gap-2">
             <FcBusinesswoman /> Quién soy?
           </h1>
-          <p className="mb-8 drop-shadow-xl text-left font-medium text-white leading-relaxed text-xl">
+          <p className="mb-8 drop-shadow-xl text-left text-white leading-relaxed text-xl">
           Soy Mónica Peña, nací en 1964 y a lo largo de mi vida he trabajado en diversas áreas. Tras dejar el trabajo corporativo, decidí cambiar de rumbo y unirme al grupo de Artesanos Unidos de la Municipalidad de San Bernardo, donde descubrí mi pasión por crear colgantes para plantas. Me encanta dar vida a los espacios con mis creaciones y siempre busco inspiración en lo cotidiano. ¡Cada día es una oportunidad para seguir aprendiendo y creciendo!
           <span className="inline-flex items-center ml-2"><FcLike /></span>
           </p>

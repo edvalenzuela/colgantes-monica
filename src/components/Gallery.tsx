@@ -11,6 +11,8 @@ import { Zoom, Navigation, Pagination } from 'swiper/modules';
 
 import { FcCamera } from "react-icons/fc";
 
+import { FixedGallery } from "@/components";
+
 export default function Gallery() {
 
   return (
@@ -51,6 +53,7 @@ export default function Gallery() {
           </div>
         </SwiperSlide>
       </Swiper>
+      <FixedGallery />
     </section>
   );
 }
