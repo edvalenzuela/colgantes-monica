@@ -27,27 +27,27 @@ export default function Gallery() {
       >
         <SwiperSlide>
           <div className="swiper-zoom-container">
-            <img src="/img/planta_1.jpg" alt='planta_1' />
+            <img src="/img/planta_1.jpg" alt='planta_1' fetchPriority="low" loading='lazy' />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-zoom-container">
-            <img src="/img/planta_2.jpg" alt='planta_2' />
+            <img src="/img/planta_2.jpg" alt='planta_2' fetchPriority="low" loading='lazy' />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-zoom-container">
-            <img src="/img/planta_3.jpg" alt='planta_3' />
+            <img src="/img/planta_3.jpg" alt='planta_3' fetchPriority="low" loading='lazy' />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-zoom-container">
-            <img src="/img/planta_4.jpg" alt='planta_4' />
+            <img src="/img/planta_4.jpg" alt='planta_4' fetchPriority="low" loading='lazy' />
           </div>
         </SwiperSlide>
         <SwiperSlide>
           <div className="swiper-zoom-container">
-            <img src="/img/planta_5.jpg" alt='planta_5' />
+            <img src="/img/planta_5.jpg" alt='planta_5' fetchPriority="low" loading='lazy' />
           </div>
         </SwiperSlide>
       </Swiper>

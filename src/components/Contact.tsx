@@ -91,7 +91,7 @@ export default function ContactForm() {
                 />
                 {formik.errors.message && formik.touched.message && <div className="text-red-500 text-xs">{formik.errors.message}</div>}
               </div>
-              <button type="submit" className="text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-700 cursor-pointer rounded text-lg">
+              <button type="submit" className="text-white bg-green-700 border-0 py-2 px-6 focus:outline-none hover:bg-green-800 cursor-pointer rounded text-lg" aria-label="Enviar">
                 Enviar
               </button>
             </form>

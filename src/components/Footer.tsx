@@ -9,19 +9,19 @@ export default function Footer() {
   const url = `https://wa.me/56991440999?text=${encodedMessage}`;
 
   return (
-    <footer className="bg-green-600">
+    <footer className="bg-green-700">
       <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-        <Link href='/' className="flex title-font text-white font-medium items-center gap-1 md:justify-start justify-center">
-          <PiPottedPlant color="brown" size={30} />
-          <p>Colgantes Mónica</p>
+        <Link href='/' className="group flex items-center gap-1 md:justify-start justify-center">
+          <PiPottedPlant className="fill-orange-400 group-hover:fill-orange-950" size={30} />
+          <p className="text-orange-950 group-hover:text-orange-400 font-bold">Colgantes Mónica</p>
         </Link>
-        <Link href="https://github.com/edvalenzuela/" title="Eduardo Valenzuela" rel="noopener noreferrer" target="_blank">
-          <p className="group text-sm text-white hover:text-green-950 ml-4 pl-4 sm:border-l-2 sm:border-gray-200 py-2 mt-0">© {new Date().getFullYear()} Desarrollado por
-            <span className="text-sm text-white group-hover:text-green-950 ml-1">@edvalenzuela</span>
+        <Link className="group" href="https://github.com/edvalenzuela/" title="Eduardo Valenzuela" rel="noopener noreferrer" target="_blank">
+          <p className="text-sm text-orange-950 hover:text-orange-400 ml-4 pl-4 sm:border-l-2 sm:border-orange-950 group-hover:border-orange-400 py-2 mt-0">© {new Date().getFullYear()} Desarrollado por
+            <span className="text-sm text-orange-950 group-hover:text-orange-400 ml-1">@edvalenzuela</span>
           </p>
         </Link>
         <span className="inline-flex items-center sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-          <p className="font-medium mr-2 text-white">Mis redes sociales: </p>
+          <p className="font-medium mr-2 text-orange-400 hover:text-orange-950">Mis redes sociales: </p>
           <div className="flex gap-2">
             <Link 
               href={`${url}`} 
@@ -30,25 +30,25 @@ export default function Footer() {
               aria-label="Contactar por WhatsApp"
               title="Ir a Whatsapp"
             >
-              <FaWhatsapp className="text-white sm:text-[40px] text-[30px]" />
+              <FaWhatsapp className="text-orange-400 hover:text-orange-950 sm:text-[40px] text-[30px]" />
             </Link>
             <Link 
-              href='#' 
+              href='https://www.facebook.com/monica.penamunoz.7' 
               target="_blank" 
               rel="noopener noreferrer"
-              aria-label="Contactar por WhatsApp"
+              aria-label="Contactar por Facebook"
               title="Ir a Facebook"
             >
-              <FaFacebook className="text-white sm:text-[40px] text-[30px]" />
+              <FaFacebook className="text-orange-400 hover:text-orange-950 sm:text-[40px] text-[30px]" />
             </Link>
             <Link 
-              href='#' 
+              href='https://www.instagram.com/hermososcolgantes/' 
               target="_blank" 
               rel="noopener noreferrer"
-              aria-label="Contactar por WhatsApp"
+              aria-label="Contactar por Instagran"
               title="Ir a Instagram"
             >
-              <FaInstagram className="text-white sm:text-[40px] text-[30px]" />
+              <FaInstagram className="text-orange-400 hover:text-orange-950 sm:text-[40px] text-[30px]" />
             </Link>
           </div>
         </span>
