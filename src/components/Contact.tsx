@@ -52,7 +52,7 @@ export default function ContactForm() {
           </iframe>
         </div>
         <div className="container px-5 py-24 mx-auto flex flex-col">
-          <div className="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
+          <div className="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative shadow-md">
             <h2 className="text-gray-900 text-4xl mb-4 font-bold flex items-center gap-2"><FcCustomerSupport size={40} /> Formulario</h2>
             <p className="leading-relaxed mb-5 text-gray-600">Si tienes alguna duda, no dudes en enviarme un correo o contactarme directamente por WhatsApp.</p>
             <form onSubmit={formik.handleSubmit}>
