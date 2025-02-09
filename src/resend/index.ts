@@ -7,8 +7,8 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 export const sendEmail = async ({ email, subject, message }:InitialValues) => {
   try {
     await resend.emails.send({
-      from: 'contacto@colgantesmonica.cl',
-      to: email,
+      from: email,
+      to: 'contacto@colgantesmonica.cl',
       subject: subject,
       html: `<p>${message}</p>`,
     });
