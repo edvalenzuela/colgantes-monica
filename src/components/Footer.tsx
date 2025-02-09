@@ -10,7 +10,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-orange-400">
-      <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+      <div className="container py-10 mx-auto flex items-center sm:flex-row flex-col gap-4 sm:gap-0">
         <Link href='/' className="group rounded-md px-3 py-2 text-base font-medium bg-orange-600 hover:bg-white text-white flex items-center gap-1 md:justify-start justify-center">
           <PiPottedPlant className="fill-white group-hover:fill-orange-600" size={30} />
           <p className="group-hover:text-orange-600 text-white font-bold">Colgantes Mónica</p>
@@ -20,7 +20,7 @@ export default function Footer() {
             <span className="text-white group-hover:text-orange-600 ml-1">@edvalenzuela</span>
           </p>
         </Link>
-        <span className="inline-flex items-center sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+        <span className="inline-flex items-center sm:ml-auto sm:mt-0 justify-center sm:justify-start">
           <div className="flex gap-6 sm:gap-4">
             <Link 
               href={`${url}`} 
