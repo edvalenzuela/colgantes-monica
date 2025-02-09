@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { FaWhatsapp, FaInstagram, FaFacebook } from "react-icons/fa";
-import { PiPottedPlant } from "react-icons/pi";
 
 export default function Footer() {
 
