@@ -13,6 +13,7 @@ export const sendEmail = async ({ email, subject, message }:InitialValues) => {
       html: `<p>${message}</p>`,
     });
   } catch (error) {
+    console.log(error)
     throw new Error('Error al enviar el correo');
   }
 }
