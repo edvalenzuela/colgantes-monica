@@ -1,6 +1,6 @@
 "use client"
 import { sendEmail } from '@/resend';
-import { FormikHelpers, FormikValues, useFormik } from 'formik';
+import { FormikHelpers, useFormik } from 'formik';
 import * as Yup from 'yup';
 
 export interface InitialValues {
