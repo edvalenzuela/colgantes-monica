@@ -21,8 +21,7 @@ export default function Footer() {
           </p>
         </Link>
         <span className="inline-flex items-center sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-          <p className="font-medium mr-2 text-orange-400 hover:text-orange-950">Mis redes sociales: </p>
-          <div className="flex gap-2">
+          <div className="flex gap-6 sm:gap-4">
             <Link 
               href={`${url}`} 
               target="_blank" 
@@ -30,7 +29,7 @@ export default function Footer() {
               aria-label="Contactar por WhatsApp"
               title="Ir a Whatsapp"
             >
-              <FaWhatsapp className="text-orange-400 hover:text-orange-950 sm:text-[40px] text-[30px]" />
+              <FaWhatsapp className="text-orange-400 hover:text-orange-950 sm:text-[40px] text-[50px]" />
             </Link>
             <Link 
               href='https://www.facebook.com/monica.penamunoz.7' 
@@ -39,7 +38,7 @@ export default function Footer() {
               aria-label="Contactar por Facebook"
               title="Ir a Facebook"
             >
-              <FaFacebook className="text-orange-400 hover:text-orange-950 sm:text-[40px] text-[30px]" />
+              <FaFacebook className="text-orange-400 hover:text-orange-950 sm:text-[40px] text-[50px]" />
             </Link>
             <Link 
               href='https://www.instagram.com/hermososcolgantes/' 
@@ -48,7 +47,7 @@ export default function Footer() {
               aria-label="Contactar por Instagran"
               title="Ir a Instagram"
             >
-              <FaInstagram className="text-orange-400 hover:text-orange-950 sm:text-[40px] text-[30px]" />
+              <FaInstagram className="text-orange-400 hover:text-orange-950 sm:text-[40px] text-[50px]" />
             </Link>
           </div>
         </span>
