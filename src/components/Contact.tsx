@@ -1,8 +1,9 @@
 "use client"
+import * as Yup from 'yup';
 import { sendEmail } from '@/resend';
 import { FormikHelpers, useFormik } from 'formik';
-import * as Yup from 'yup';
-import { FcCustomerSupport } from "react-icons/fc";
+import { FcAssistant } from "react-icons/fc";
+import Link from 'next/link';
 
 export interface InitialValues {
   email: string;
@@ -37,74 +38,77 @@ export default function ContactForm() {
   });
 
   return (
-    <section className="min-h-screen text-gray-600 relative bg-white" id="contacto">
-        <div className="absolute inset-0 bg-gray-300">
-          <iframe
-              width="100%"
-              height="100%"
-              title="map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3323.5039673254623!2d-70.70699892205725!3d-33.59222610479062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d95a86f169a5%3A0x905d124b0e968095!2sPlaza%20de%20Armas%20de%20San%20Bernardo!5e0!3m2!1ses!2scl!4v1739112234419!5m2!1ses!2scl"
-              style={{ filter: 'grayscale(1) contrast(1.2) opacity(0.4)', border: '0' }}
-              allowFullScreen
-              loading='lazy'
-              referrerPolicy="no-referrer-when-downgrade"
-            >
-          </iframe>
+    <section id='contacto'>
+      <div className="container px-5 py-24 mx-auto">
+        <div className="flex flex-col text-center w-full mb-5">
+          <h2 className="text-4xl mb-4 font-bold flex justify-center items-center gap-2"><FcAssistant  size={40} /> Formulario</h2>
+          <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
+            Si tienes alguna duda, no dudes en enviarme un correo o contactarme directamente por WhatsApp.
+          </p>
         </div>
-        <div className="container px-5 py-24 mx-auto flex flex-col">
-          <div className="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative shadow-md">
-            <h2 className="text-gray-900 text-4xl mb-4 font-bold flex items-center gap-2"><FcCustomerSupport size={40} /> Formulario</h2>
-            <p className="leading-relaxed mb-5 text-gray-600">Si tienes alguna duda, no dudes en enviarme un correo o contactarme directamente por WhatsApp.</p>
-            <form onSubmit={formik.handleSubmit}>
-              <div className="relative mb-4">
-                <label htmlFor="email" className="leading-7 text-sm text-gray-600">Correo:</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                  onChange={formik.handleChange}
-                  value={formik.values.email}
-                />
-                {formik.errors.email && formik.touched.email && <div className="text-red-500 text-xs">{formik.errors.email}</div>}
-              </div>
-              <div className="relative mb-4">
-                <label htmlFor="subject" className="leading-7 text-sm text-gray-600">Asunto:</label>
+        <div className="lg:w-1/2 md:w-2/3 mx-auto">
+          <form onSubmit={formik.handleSubmit} className="flex flex-wrap -m-2">
+            <div className="p-2 w-1/2">
+              <div className="relative">
+                <label htmlFor="subject" className="leading-7 text-base">Asunto:</label>
                 <input
                   type="text"
                   id="subject"
                   name="subject"
-                  className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                  onChange={formik.handleChange}
+                  className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                   value={formik.values.subject}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
                 />
-                {formik.errors.subject && formik.touched.subject && <div className="text-red-500 text-xs">{formik.errors.subject}</div>}
+                {formik.touched.subject && formik.errors.subject && (
+                  <p className="text-red-600 text-base font-medium mt-1">{formik.errors.subject}</p>
+                )}
               </div>
-              <div className="relative mb-4">
-                <label htmlFor="message" className="leading-7 text-sm text-gray-600">Mensaje:</label>
+            </div>
+            <div className="p-2 w-1/2">
+              <div className="relative">
+                <label htmlFor="email" className="leading-7 text-base">Email:</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  value={formik.values.email}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                />
+                {formik.touched.email && formik.errors.email && (
+                  <p className="text-red-600 text-base font-medium mt-1">{formik.errors.email}</p>
+                )}
+              </div>
+            </div>
+            <div className="p-2 w-full">
+              <div className="relative">
+                <label htmlFor="message" className="leading-7 text-base">Mensaje:</label>
                 <textarea
                   id="message"
                   name="message"
-                  className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-                  onChange={formik.handleChange}
+                  className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                   value={formik.values.message}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
                 />
-                {formik.errors.message && formik.touched.message && <div className="text-red-500 text-xs">{formik.errors.message}</div>}
+                {formik.touched.message && formik.errors.message && (
+                  <p className="text-red-600 text-base font-medium mt-1">{formik.errors.message}</p>
+                )}
               </div>
-              <button type="submit" className="text-white bg-green-700 border-0 py-2 px-6 focus:outline-none hover:bg-green-800 cursor-pointer rounded text-lg" aria-label="Enviar">
+            </div>
+            <div className="p-2 w-full">
+              <button type="submit" className="flex mx-auto text-white cursor-pointer bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg">
                 Enviar
               </button>
-            </form>
-          </div>
-          <div className="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 relative z-10 shadow-md">
-            <div className="lg:w-1/2 mt-4 lg:mt-0">
-              <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">Correo</h2>
-              <a className="text-indigo-500 leading-relaxed">contacto@colgantesmonica.cl</a>
-              <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">Celular</h2>
-              <p className="leading-relaxed">+56991440999</p>
             </div>
+          </form>
+          <div className="p-2 w-full pt-8 mt-8 border-t border-gray-300 text-center">
+            <Link href="mailto:contacto@colgantesmonica.cl" className="text-xl font-medium">contacto@colgantesmonica.cl</Link>
           </div>
         </div>
+      </div>
     </section>
   );
 }
