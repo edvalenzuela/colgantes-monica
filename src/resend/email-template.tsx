@@ -19,7 +19,7 @@ export default function EmailTemplate ({
   message,
 }: EmailTemplateProps) {
   return (
-    <Html>
+    <Html lang='es'>
       <Head />
       <Preview>Nuevo pedido de colgante</Preview>
       <Body style={main}>
