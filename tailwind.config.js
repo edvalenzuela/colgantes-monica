@@ -2,7 +2,10 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'header': "url('/img/bg_2.jpg')",
+        'texture-floral': "url('/img/texture-floral.png')",
+        'texture-gravel': "url('/img/gravel.png')",
+        'texture-leaves': "url('/img/leaves.webp')",
+        'texture-green': "url('/img/green.png')"
       },
     },
   },
