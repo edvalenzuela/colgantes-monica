@@ -16,7 +16,7 @@ export default function Footer() {
           <p className="text-white font-bold text-nowrap">Colgantes Mónica</p>
         </Link>
         <Link className="font-bold text-base" href="https://github.com/edvalenzuela/" title="Eduardo Valenzuela" rel="noopener noreferrer" target="_blank">
-          <p className="text-white ml-4 pl-4 sm:border-l-2 sm:border-white py-2 mt-0">© {new Date().getFullYear()} Desarrollado por
+          <p className="text-white sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-white py-2 mt-0">© {new Date().getFullYear()} Desarrollado por
             <span className="text-white ml-1">@edvalenzuela</span>
           </p>
         </Link>
@@ -29,7 +29,7 @@ export default function Footer() {
               aria-label="Contactar por WhatsApp"
               title="Ir a Whatsapp"
             >
-              <FaWhatsapp className="text-white hover:text-green-600 sm:text-[40px] text-[50px]" />
+              <FaWhatsapp className="text-white hover:text-green-700 sm:text-[40px] text-[50px]" />
             </Link>
             <Link 
               href='https://www.facebook.com/monica.penamunoz.7' 
@@ -38,7 +38,7 @@ export default function Footer() {
               aria-label="Contactar por Facebook"
               title="Ir a Facebook"
             >
-              <FaFacebook className="text-white hover:text-green-600 sm:text-[40px] text-[50px]" />
+              <FaFacebook className="text-white hover:text-green-700 sm:text-[40px] text-[50px]" />
             </Link>
             <Link 
               href='https://www.instagram.com/hermososcolgantes/' 
@@ -47,7 +47,7 @@ export default function Footer() {
               aria-label="Contactar por Instagran"
               title="Ir a Instagram"
             >
-              <FaInstagram className="text-white hover:text-green-600 sm:text-[40px] text-[50px]" />
+              <FaInstagram className="text-white hover:text-green-700 sm:text-[40px] text-[50px]" />
             </Link>
           </div>
         </span>
