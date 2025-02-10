@@ -6,12 +6,14 @@ import { FcAssistant } from "react-icons/fc";
 import Link from 'next/link';
 
 export interface InitialValues {
+  name: string;
   email: string;
   subject: string;
   message: string;
 }
 
 const validationSchema = Yup.object({
+  name: Yup.string().required('El nombre es obligatorio').trim().max(50, 'El nombre no puede tener más de 50 caracteres'),
   email: Yup.string().email('Correo electrónico inválido').required('El correo es obligatorio').trim(),
   subject: Yup.string().required('El asunto es obligatorio').trim().max(50, 'El asunto no puede tener más de 50 caracteres'),
   message: Yup.string().required('El mensaje es obligatorio').trim().max(500, 'El mensaje no puede tener más de 500 caracteres'),
@@ -20,6 +22,7 @@ const validationSchema = Yup.object({
 export default function ContactForm() {
   const formik = useFormik<InitialValues>({
     initialValues: {
+      name: '',
       email: '',
       subject: '',
       message: '',
@@ -48,6 +51,23 @@ export default function ContactForm() {
         </div>
         <div className="lg:w-1/2 md:w-2/3 mx-auto">
           <form onSubmit={formik.handleSubmit} className="flex flex-wrap -m-2">
+            <div className="p-2 w-full">
+              <div className="relative">
+                <label htmlFor="name" className="leading-7 text-base">Nombre:</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  className="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  value={formik.values.name}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                />
+                {formik.touched.name && formik.errors.name && (
+                  <p className="text-red-600 text-base font-medium mt-1">{formik.errors.name}</p>
+                )}
+              </div>
+            </div>
             <div className="p-2 w-1/2">
               <div className="relative">
                 <label htmlFor="subject" className="leading-7 text-base">Asunto:</label>

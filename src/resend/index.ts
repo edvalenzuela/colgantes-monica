@@ -1,17 +1,18 @@
 "use server"
 import { Resend } from 'resend';
 import { InitialValues } from '@/components/Contact';
+import EmailTemplate from './email-template';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-export const sendEmail = async ({ email, subject, message }:InitialValues) => {
+export const sendEmail = async ({ email, subject, name, message }:InitialValues) => {
   try {
     await resend.emails.send({
-      from: 'contacto@colgantesmonica.cl',
-      to: 'contacto@colgantesmonica.cl',
-      subject: subject,
-      html: `<p><strong>Correo del remitente:</strong> ${email}</p>
-         <p><strong>Mensaje:</strong> ${message}</p>`
+      from: 'Monica Peña <noreply@colgantesmonica.cl>',
+      to: ['contacto@colgantesmonica.cl'],
+      replyTo: email,
+      subject,
+      react: EmailTemplate({name, message}),
     });
   } catch (error) {
     console.log(error)
