@@ -1,3 +1,4 @@
+import * as React from 'react';
 import {
   Body,
   Container,
@@ -7,16 +8,11 @@ import {
   Section,
   Text,
 } from '@react-email/components';
-import * as React from 'react';
 
 interface EmailTemplateProps {
   name: string;
   message: string;
 }
-
-const baseUrl = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : 'https://www.colgantesmonica.cl';
 
 export default function EmailTemplate ({
   name,
@@ -41,8 +37,7 @@ export default function EmailTemplate ({
 };
 
 const main = {
-  backgroundImage: `url(${baseUrl}/img/leaves.webp)`,
-  backgroundRepeat: "repeat",
+  backgroundColor: '#f6f9fc',
   padding: '10px 0',
 };
 
