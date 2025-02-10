@@ -16,7 +16,7 @@ import { FixedGallery } from "@/components";
 export default function Gallery() {
 
   return (
-    <section id="galería" className="h-auto bg-black py-10">
+    <section id="galería" className="bg-black py-10">
       <h2 className="text-4xl text-white pb-10 font-bold flex items-center gap-2 justify-center"><FcCamera size={40} /> Galería</h2>
       <Swiper
         zoom={true}

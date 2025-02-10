@@ -9,15 +9,15 @@ export default function Footer() {
   const url = `https://wa.me/56991440999?text=${encodedMessage}`;
 
   return (
-    <footer className="bg-orange-400">
-      <div className="container py-10 sm:py-5 mx-auto flex items-center sm:flex-row flex-col gap-4 sm:gap-0">
-        <Link href='/' className="group rounded-md px-3 py-2 text-base font-medium bg-orange-600 hover:bg-white text-white flex items-center gap-1 md:justify-start justify-center">
-          <CustomSVGIcon className="text-black"/>
-          <p className="group-hover:text-orange-600 text-white font-bold">Colgantes Mónica</p>
+    <footer className="bg-repeat bg-fixed bg-texture-gravel bg-amber-900 z-20">
+      <div className="container py-5 sm:py-5 mx-auto flex items-center sm:flex-row flex-col gap-2 sm:gap-0">
+        <Link href='/' className="rounded-md px-3 py-2 text-base font-medium bg-green-700 hover:bg-green-800 text-white flex items-center gap-1 md:justify-start justify-center">
+          <CustomSVGIcon className="text-black w-10"/>
+          <p className="text-white font-bold text-nowrap">Colgantes Mónica</p>
         </Link>
-        <Link className="group font-bold text-base" href="https://github.com/edvalenzuela/" title="Eduardo Valenzuela" rel="noopener noreferrer" target="_blank">
-          <p className="text-white hover:text-orange-600 ml-4 pl-4 sm:border-l-2 sm:border-white group-hover:border-orange-600 py-2 mt-0">© {new Date().getFullYear()} Desarrollado por
-            <span className="text-white group-hover:text-orange-600 ml-1">@edvalenzuela</span>
+        <Link className="font-bold text-base" href="https://github.com/edvalenzuela/" title="Eduardo Valenzuela" rel="noopener noreferrer" target="_blank">
+          <p className="text-white ml-4 pl-4 sm:border-l-2 sm:border-white py-2 mt-0">© {new Date().getFullYear()} Desarrollado por
+            <span className="text-white ml-1">@edvalenzuela</span>
           </p>
         </Link>
         <span className="inline-flex items-center sm:ml-auto sm:mt-0 justify-center sm:justify-start">
@@ -29,7 +29,7 @@ export default function Footer() {
               aria-label="Contactar por WhatsApp"
               title="Ir a Whatsapp"
             >
-              <FaWhatsapp className="text-white hover:text-orange-600 sm:text-[40px] text-[50px]" />
+              <FaWhatsapp className="text-white hover:text-green-600 sm:text-[40px] text-[50px]" />
             </Link>
             <Link 
               href='https://www.facebook.com/monica.penamunoz.7' 
@@ -38,7 +38,7 @@ export default function Footer() {
               aria-label="Contactar por Facebook"
               title="Ir a Facebook"
             >
-              <FaFacebook className="text-white hover:text-orange-600 sm:text-[40px] text-[50px]" />
+              <FaFacebook className="text-white hover:text-green-600 sm:text-[40px] text-[50px]" />
             </Link>
             <Link 
               href='https://www.instagram.com/hermososcolgantes/' 
@@ -47,7 +47,7 @@ export default function Footer() {
               aria-label="Contactar por Instagran"
               title="Ir a Instagram"
             >
-              <FaInstagram className="text-white hover:text-orange-600 sm:text-[40px] text-[50px]" />
+              <FaInstagram className="text-white hover:text-green-600 sm:text-[40px] text-[50px]" />
             </Link>
           </div>
         </span>
