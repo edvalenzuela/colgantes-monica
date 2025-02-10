@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Navbarv2 from "@/components/Navbarv2";
+import { Navbarv2 } from "@/components";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: "Colgantes Mónica",
     images: [
       {
-        url: "https://www.colgantesmonica.cl/img/bg_3.jpg",
+        url: "https://www.colgantesmonica.cl/img/bg.jpg",
         width: 1200,
         height: 630,
         alt: "Colgantes para plantas en un jardín",
@@ -62,7 +62,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} bg-repeat bg-fixed bg-texture-leaves`}>
         <Navbarv2 />  
         {children}
       </body>
