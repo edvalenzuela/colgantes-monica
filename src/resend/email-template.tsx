@@ -25,7 +25,7 @@ export default function EmailTemplate ({
       <Body style={main}>
         <Container style={container}>
           <Section>
-            <Text style={text}>Hola <span style={{ fontWeight: 'bold' }}>{name}</span>:</Text>
+            <Text style={text}>{name}:</Text>
             <Text style={text}>
               {message}
             </Text>
