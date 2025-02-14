@@ -62,7 +62,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${geistSans.variable} ${geistMono.variable} bg-repeat bg-fixed bg-texture-leaves`}>
+      <body id='inicio' className={`${geistSans.variable} ${geistMono.variable} bg-repeat bg-fixed bg-texture-leaves`}>
         <Navbarv2 />  
         {children}
       </body>

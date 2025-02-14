@@ -1,6 +1,6 @@
 export default function Story() {
   return (
-    <section className="text-gray-600 body-font" id='inicio'>
+    <section className="text-gray-600 body-font">
       <div className="container px-5 py-10 mx-auto flex flex-col">
         <div className="w-full mx-auto">
           <div className="lg:w-4/6 mx-auto rounded-lg h-64 overflow-hidden">

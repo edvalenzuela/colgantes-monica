@@ -6,7 +6,7 @@ import { FaBars, FaTimes } from 'react-icons/fa'
 import CustomSVGIcon from './SvgIcon'
 
 const navigation = [
-  { name: 'Inicio', href: '/', id: 'inicio' },
+  { name: 'Inicio', href: '#inicio', id: 'inicio' },
   { name: 'Quien soy', href: '#quien-soy', id: 'quien-soy' },
   { name: 'Galería', href: '#galería', id: 'galería' },
   { name: 'Contacto', href: '#contacto', id: 'contacto' },
@@ -14,7 +14,7 @@ const navigation = [
 
 export default function Navbarv2() {
   const [isOpen, setIsOpen] = useState(false)
-  const [activeMenu, setActiveMenu] = useState("inicio")
+  const [activeMenu, setActiveMenu] = useState("#inicio")
 
   function handleMenuClick(id: string) {
     setActiveMenu(id);
