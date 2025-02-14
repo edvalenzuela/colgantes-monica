@@ -1,9 +1,9 @@
 "use client"
 import * as Yup from 'yup';
+import Link from 'next/link';
 import { sendEmail } from '@/resend';
 import { FormikHelpers, useFormik } from 'formik';
 import { FcAssistant } from "react-icons/fc";
-import Link from 'next/link';
 
 export interface InitialValues {
   name: string;
@@ -42,9 +42,9 @@ export default function ContactForm() {
 
   return (
     <section id='contacto'>
-      <div className="container px-5 py-24 mx-auto">
+      <div className="container px-5 py-10 mx-auto">
         <div className="flex flex-col text-center w-full mb-5">
-          <h2 className="text-4xl mb-4 font-bold flex justify-center items-center gap-2"><FcAssistant  size={40} /> Formulario</h2>
+          <h2 className="text-4xl mb-4 font-bold flex justify-center items-center gap-2"><FcAssistant  size={40} />Contacto</h2>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
             Si tienes alguna duda, no dudes en enviarme un correo o contactarme directamente por WhatsApp.
           </p>
@@ -119,7 +119,7 @@ export default function ContactForm() {
               </div>
             </div>
             <div className="p-2 w-full">
-              <button type="submit" className="flex mx-auto text-white cursor-pointer bg-green-700 font-medium border-0 py-2 px-8 focus:outline-none hover:bg-green-800 rounded text-xl">
+              <button type="submit" className="w-full sm:w-auto flex mx-auto text-white justify-center cursor-pointer bg-green-700 font-medium border-0 py-2 px-8 focus:outline-none hover:bg-green-800 rounded text-xl">
                 Enviar
               </button>
             </div>

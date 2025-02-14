@@ -9,9 +9,9 @@ export default function Footer() {
   const url = `https://wa.me/56991440999?text=${encodedMessage}`;
 
   return (
-    <footer className="bg-repeat bg-fixed bg-texture-gravel bg-amber-900 z-20">
-      <div className="container py-5 sm:py-5 mx-auto flex items-center sm:flex-row flex-col gap-2 sm:gap-0">
-        <Link href='/' className="rounded-md px-3 py-2 text-base font-medium bg-green-700 hover:bg-green-800 text-white flex items-center gap-1 md:justify-start justify-center">
+    <footer className="bg-repeat bg-fixed bg-texture-green z-20">
+      <div className="container py-3 mx-auto flex items-center sm:flex-row flex-col gap-2 sm:gap-0">
+        <Link href='/' className="rounded-md px-3 text-base font-medium bg-green-700 hover:bg-green-800 text-white flex items-center gap-1 md:justify-start justify-center">
           <CustomSVGIcon className="text-black w-10"/>
           <p className="text-white font-bold text-nowrap">Colgantes Mónica</p>
         </Link>

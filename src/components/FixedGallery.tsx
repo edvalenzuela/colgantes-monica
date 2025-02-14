@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function FixedGallery() {
   return (
     <div className="container px-5 mt-20 mx-auto">
