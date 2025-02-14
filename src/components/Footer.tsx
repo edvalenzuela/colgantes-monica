@@ -11,9 +11,9 @@ export default function Footer() {
   return (
     <footer className="bg-repeat bg-fixed bg-texture-green z-20">
       <div className="container py-3 mx-auto flex items-center sm:flex-row flex-col gap-2 sm:gap-0">
-        <Link href='/' className="rounded-md px-3 text-base font-medium bg-green-700 hover:bg-green-800 text-white flex items-center gap-1 md:justify-start justify-center">
+        <Link href='/' className="group rounded-md px-3 text-base font-medium bg-green-700 hover:bg-white flex items-center gap-1 md:justify-start justify-center">
           <CustomSVGIcon className="text-black w-10"/>
-          <p className="text-white font-bold text-nowrap">Colgantes Mónica</p>
+          <p className="text-white group-hover:text-green-700 font-bold text-nowrap">Colgantes Mónica</p>
         </Link>
         <Link className="font-bold text-base" href="https://github.com/edvalenzuela/" title="Eduardo Valenzuela" rel="noopener noreferrer" target="_blank">
           <p className="text-white sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-white py-2 mt-0">© {new Date().getFullYear()} Desarrollado por
