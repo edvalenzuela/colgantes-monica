@@ -1,9 +1,10 @@
-import { About, Contact, Footer, Gallery} from "@/components";
+import { About, Contact, Footer, Gallery, Story} from "@/components";
 
 export default function Home() {
   return (
     <>
       <main>
+        <Story />
         <About />
         <Gallery />
         <Contact />
