@@ -1,4 +1,4 @@
-import { About, Contact, Footer, Gallery, Story} from "@/components";
+import { About, Contact, Footer, Gallery, Story, ButtonGoTop} from "@/components";
 
 export default function Home() {
   return (
@@ -10,6 +10,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <ButtonGoTop />
     </>
   );
 }

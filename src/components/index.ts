@@ -5,4 +5,5 @@ export { default as Gallery } from './Gallery';
 export { default as Contact } from './Contact';
 export { default as FixedGallery } from './FixedGallery';
 export { default as Story } from './Story';
+export { default as ButtonGoTop } from './ButtonGoTop';
 export { default as Footer } from './Footer';
