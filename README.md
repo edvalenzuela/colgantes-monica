@@ -2,8 +2,7 @@
 
 ## Demo proyecto final alojado en Vercel [Click Aquí](https://colgantes-monica.vercel.app/)
 
-![image](https://github.com/user-attachments/assets/919ccbc0-77fd-4c2f-b6a8-77fbe7742862)
-
+![image](https://github.com/user-attachments/assets/9d2b2021-240b-46d3-b099-3bda71b990c6)
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
