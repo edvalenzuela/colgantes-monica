@@ -42,14 +42,14 @@ export default function ContactForm() {
 
   return (
     <section id='contacto'>
-      <div className="container px-5 py-10 mx-auto">
+      <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-col text-center w-full mb-5">
           <h2 className="text-4xl mb-4 font-bold flex justify-center items-center gap-2"><FcAssistant  size={40} />Contacto</h2>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
             Si tienes alguna duda, no dudes en enviarme un correo o contactarme directamente por WhatsApp.
           </p>
         </div>
-        <div className="lg:w-1/2 md:w-2/3 mx-auto">
+        <div className="lg:w-1/2 md:w-2/3 mx-auto mb-8">
           <form onSubmit={formik.handleSubmit} className="flex flex-wrap -m-2">
             <div className="p-2 w-full">
               <div className="relative">
@@ -127,6 +127,9 @@ export default function ContactForm() {
           <div className="p-2 w-full pt-8 mt-8 border-t border-gray-300 text-center">
             <Link href="mailto:contacto@colgantesmonica.cl" className="text-xl font-medium">contacto@colgantesmonica.cl</Link>
           </div>
+        </div>
+        <div className="w-40 h-40 mx-auto bg-white text-gray-400">
+          <img alt="logo_1" className="object-contain object-center h-full w-full" src="/img/logo.png" fetchPriority="low" loading='lazy' />
         </div>
       </div>
     </section>
