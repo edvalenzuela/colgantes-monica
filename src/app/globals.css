@@ -23,3 +23,7 @@ body {
   height: 600px;
   object-fit: contain;
 }
+
+.mySwiper .swiper-pagination-fraction{
+  color: white;
+}
