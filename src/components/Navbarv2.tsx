@@ -6,10 +6,8 @@ import { FaBars, FaTimes } from 'react-icons/fa'
 import CustomSVGIcon from './SvgIcon'
 
 const navigation = [
-  { name: 'Inicio', href: '#inicio', id: 'inicio' },
   { name: 'Quien soy', href: '#quien-soy', id: 'quien-soy' },
   { name: 'Galería', href: '#galería', id: 'galería' },
-  { name: 'Contacto', href: '#contacto', id: 'contacto' },
 ];
 
 export default function Navbarv2() {

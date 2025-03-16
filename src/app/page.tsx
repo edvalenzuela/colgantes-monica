@@ -1,4 +1,4 @@
-import { About, Contact, Footer, Gallery, ButtonGoTop} from "@/components";
+import { About, Footer, Gallery, ButtonGoTop} from "@/components";
 
 export default function Home() {
   return (
@@ -6,7 +6,6 @@ export default function Home() {
       <main>
         <About />
         <Gallery />
-        <Contact />
       </main>
       <Footer />
       <ButtonGoTop />
